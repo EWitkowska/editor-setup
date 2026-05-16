@@ -55,7 +55,17 @@ fi
 # Claude Code
 CLAUDE_SKILLS="$HOME/.claude/skills"
 if [[ -d "$CLAUDE_SKILLS" ]]; then
-    backup_and_link "$REPO/skills/claude/organize-settings.md" "$CLAUDE_SKILLS/organize-settings.md"
+    if [[ -e "$CLAUDE_SKILLS/organize-settings" && ! -L "$CLAUDE_SKILLS/organize-settings" ]]; then
+        mv "$CLAUDE_SKILLS/organize-settings" "$CLAUDE_SKILLS/organize-settings.bak"
+        backups=$(( backups + 1 ))
+    fi
+    if [[ -L "$CLAUDE_SKILLS/organize-settings" ]]; then
+        rm "$CLAUDE_SKILLS/organize-settings"
+    fi
+    if [[ -L "$CLAUDE_SKILLS/organize-settings.md" ]]; then
+        rm "$CLAUDE_SKILLS/organize-settings.md"
+    fi
+    ln -s "$REPO/skills/claude/organize-settings" "$CLAUDE_SKILLS/organize-settings"
     printf "✓  %-12s  skill installed: organize-settings\n" "Claude Code"
     installed+=("Claude Code")
 else
