@@ -1,3 +1,8 @@
+---
+name: organize-settings
+description: Organizes VS Code/Cursor settings.json into 9 labeled sections, moving misplaced or unsectioned settings to their correct location while preserving comments, formatting, and trailing commas.
+---
+
 Detect the OS and find settings.json:
 - macOS: `~/Library/Application Support/Code/User/settings.json`
 - Linux: `~/.config/Code/User/settings.json`
