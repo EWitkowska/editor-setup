@@ -21,7 +21,7 @@ My personal VS Code and Cursor configuration, managed via symlinks so both edito
 ## Installation
 
 ```bash
-git clone https://github.com/ewawitkowska/editor-setup.git
+git clone https://github.com/EWitkowska/editor-setup.git
 cd editor-setup
 ./setup.sh
 ```
