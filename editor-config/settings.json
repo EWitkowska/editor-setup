@@ -1,0 +1,143 @@
+{
+	// ==========================================
+	// 1. INTERFACE AND EDITOR APPEARANCE (UI)
+	// ==========================================
+	"workbench.colorTheme": "Dark Modern",
+	"workbench.iconTheme": "material-icon-theme",
+	"window.autoDetectColorScheme": false,
+	"editor.minimap.enabled": false,
+	"workbench.editor.enablePreview": false,
+	"workbench.tree.renderIndentGuides": "always",
+	"zenMode.hideLineNumbers": false,
+	"search.showLineNumbers": true,
+	"notebook.lineNumbers": "on",
+	"explorer.fileNesting.enabled": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.activityBar.location": "top",
+	"workbench.layoutControl.enabled": false,
+	"workbench.productIconTheme": "material-product-icons",
+	"window.commandCenter": false,
+	"workbench.browser.showInTitleBar": false,
+
+	// ==========================================
+	// 2. FONTS, CURSOR, AND EDITOR BEHAVIOR
+	// ==========================================
+	"editor.fontSize": 15,
+	"editor.cursorStyle": "block",
+	"editor.cursorBlinking": "solid",
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingQuotes": "always",
+	"editor.semanticHighlighting.enabled": true,
+	"editor.inlayHints.enabled": "on",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.smoothScrolling": true,
+
+	// ==========================================
+	// 3. FILE SYSTEM, AUTO-SAVE, AND FORMATTING
+	// ==========================================
+	"security.workspace.trust.untrustedFiles": "open",
+	"files.autoSave": "onFocusChange",
+	"files.atomicSave": false,
+	"editor.formatOnSave": true,
+	"files.trimTrailingWhitespace": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+
+	// ==========================================
+	// 4. INTEGRATED TERMINAL CONFIGURATION
+	// ==========================================
+	"terminal.integrated.fontFamily": "MesloLGS NF, Regular",
+	"terminal.integrated.fontSize": 17,
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.initialHint": false,
+
+	// ==========================================
+	// 5. GLOBAL FORMATTER AND TOOL SETTINGS
+	// ==========================================
+	"prettier.useTabs": true,
+	"eslint.run": "onSave",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"aws.telemetry": false,
+	"aws.cloudformation.telemetry.enabled": false,
+
+	// ==========================================
+	// 6. PYTHON ENVIRONMENT AND ANALYSIS (PYLANCE)
+	// ==========================================
+	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+	"python.languageServer": "Pylance",
+	"python.analysis.typeCheckingMode": "standard",
+	"python.analysis.autoImportCompletions": true,
+	"python.analysis.autoSearchPaths": true,
+	"python.analysis.diagnosticMode": "workspace",
+	"python.analysis.completeFunctionParens": true,
+
+	// ==========================================
+	// 7. LANGUAGE-SPECIFIC OVERRIDES
+	// ==========================================
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.ruff": "explicit",
+			"source.organizeImports.ruff": "explicit"
+		}
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[dockercompose]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": "advanced",
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+
+	// ==========================================
+	// 8. MACROS AND SHORTCUTS
+	// ==========================================
+	"multiCommand.commands": [
+		{
+			"command": "extension.runCommentSearch",
+			"sequence": [
+				{
+					"command": "editor.actions.findWithArgs",
+					"args": {
+						"searchString": "(//|#).*$",
+						"isRegex": true,
+						"matchWholeWord": false,
+						"isCaseSensitive": false
+					}
+				},
+				"editor.action.selectAllMatches"
+			]
+		}
+	],
+
+	// ==========================================
+	// 9. AI TOOLS AND CHAT
+	// ==========================================
+	"chat.fontSize": 15,
+	"claudeCode.initialPermissionMode": "acceptEdits",
+	"github.com.nextEditSuggestions.enabled": false,
+	"github.copilot.enable": {
+		"*": false,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"python": false
+	}
+}

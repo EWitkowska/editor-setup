@@ -1,0 +1,63 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "cmd+i",
+		"command": "composerMode.agent"
+	},
+	{
+		"key": "alt+/",
+		"command": "editor.action.changeAll",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+f2",
+		"command": "-editor.action.changeAll",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "`",
+		"command": "editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "f2",
+		"command": "-editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+'",
+		"command": "workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+g",
+		"command": "-workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+shift+/",
+		"command": "extension.runCommentSearch"
+	},
+	{
+		"key": "alt+.",
+		"command": "notebook.selectAllFindMatches"
+	},
+	{
+		"key": "alt+cmd+s",
+		"command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+		"when": "!isAuxiliaryWindowFocusedContext"
+	},
+	{
+		"key": "cmd+t",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "cmd+shift+]",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "cmd+shift+[",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
+	}
+]
